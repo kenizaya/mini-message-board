@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <div class="container">
+      <% for(const message of messages) {%>
+      <div class="message-container">
+        <span>@<%=message.user%> </span>
+        <p class="message"><%=message.text%></p>
+        <div class="message-info">
+          <span><%=formatDate(message.added, 'dd MMM yyyy')%> </span>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </body>
+</html>
