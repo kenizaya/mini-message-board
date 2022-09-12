@@ -22,6 +22,9 @@ a {
 .message-container {
   width: 550px;
   padding: 20px;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .message {
@@ -31,4 +34,41 @@ a {
 .message-info {
   display: flex;
   justify-content: space-between;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+
+  /* gap: 20px; */
+}
+
+input {
+  height: 40px;
+  padding: 24px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom: none;
+  font-size: 1.5rem;
+  outline: none;
+}
+
+textarea {
+  font-size: 1.5rem;
+  padding: 24px;
+  resize: none;
+  border-top: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border: 2px solid black;
+}
+
+button[type='submit'] {
+  margin-top: 18px;
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
 }
