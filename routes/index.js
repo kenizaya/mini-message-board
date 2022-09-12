@@ -16,11 +16,21 @@ const messages = [
 ]
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
+router.get('/', (req, res, next) => {
   res.render('index', { title: 'Message Board', messages, formatDate })
 })
 
-router.get('/new', function (req, res, next) {
+router.get('/new', (req, res, next) => {
   res.render('form', { title: 'New Message' })
+})
+
+router.post('/new', (req, res, next) => {
+  messages.unshift({
+    text: req.body.message,
+    user: req.body.user,
+    added: new Date(),
+  })
+
+  res.redirect('/')
 })
 module.exports = router

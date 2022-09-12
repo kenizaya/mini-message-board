@@ -8,11 +8,18 @@
     <title><%= title %></title>
   </head>
   <body>
+    <a href="/"><h1>Home</h1></a>
     <div class="container">
       <h1><%=title%></h1>
       <form method="POST" action="/new" class="form-container">
-        <input type="text" name="user" placeholder="Username" />
-        <textarea placeholder="What's up?" cols="30" rows="8"></textarea>
+        <input type="text" name="user" placeholder="Username" required />
+        <textarea
+          placeholder="What's up?"
+          name="message"
+          cols="30"
+          rows="8"
+          required
+        ></textarea>
         <button type="submit">Post</button>
       </form>
     </div>

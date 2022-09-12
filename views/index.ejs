@@ -5,8 +5,9 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <h1><%= title %></h1>
+    <a href="/"><h1><%= title %></h1></a>
     <div class="container">
+      <a href="/new"><button>Post New Message</button></a>
       <% for(const message of messages) {%>
       <div class="message-container">
         <span>@<%=message.user%> </span>
